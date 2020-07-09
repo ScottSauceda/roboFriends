@@ -1,15 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-import Hello from './Hello';
+import Card from './Card'
 // import * as serviceWorker from './serviceWorker';
 import 'tachyons';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Hello greeting={'Hello' + 'React Ninja Turtle'}/>
+    <Card />
   </React.StrictMode>,
   document.getElementById('root')
 );
