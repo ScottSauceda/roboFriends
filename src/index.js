@@ -9,7 +9,7 @@ import 'tachyons';
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Hello greeting={'Hello' + 'React Ninja'}/>
+    <Hello greeting={'Hello' + 'React Ninja Turtle'}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
