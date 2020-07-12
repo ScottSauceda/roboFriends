@@ -1,0 +1,13 @@
+/* @font-face {
+    font-family: ''SEGA LOGO FONT;
+    font-style: normal;
+    font-weight: normal;
+    src: local('SEGA LOGO FONT'), url('SEGA.woff') format('wiff');
+} */
+    /* I was not able to find the woff formula off of SEGA LOGO FONT website suggested. Leaving this here for educational and reference purposes. */
+
+h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 200;
+    color: #0ccac4;
+}
