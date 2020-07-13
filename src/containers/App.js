@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import CardList from './CardList';
-// import { robots } from './robots';
-import Scroll from './scroll';
-import SearchBox from './SearchBox';
+import CardList from '../components/CardList';
+import Scroll from '../components/Scroll';
+import SearchBox from '../components/SearchBox';
 import './App.css';
 
 
@@ -27,10 +26,13 @@ class App extends Component {
     }
 
     render() {
-            const filteredRobots = this.state.robots.filter(robot =>{
-            return robot.name.toLowerCase().includes(this.state.searchField.toLowerCase());
+        const { robots, searchField } = this.state;
+            const filteredRobots = robots.filter(robot =>{
+            return robot.name.toLowerCase().includes(searchField.toLowerCase());
         })
-        if(this.state.robots.length === 0){
+        // if(robots.length === 0){
+            // can also make this ternary, see build react app 6 for code
+        if(!robots.length){
             return <h1>Loading</h1>
         } else {
             return (
