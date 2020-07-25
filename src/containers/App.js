@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import ErrorBoundary from '../components/ErrorBoundary';
+import Header from '../components/Header';
 import Scroll from '../components/Scroll';
 import SearchBox from '../components/SearchBox';
 import './App.css';
@@ -44,7 +45,7 @@ class App extends Component {
         } else {
             return (
                 <div className="tc">
-                    <h1 className="f1">RoboFriends</h1>
+                    <Header />
                     <SearchBox searchChange={onSearchChange} />
                     <Scroll>
                         <ErrorBoundary>
