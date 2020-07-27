@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import CardList from '../components/CardList';
-import ErrorBoundary from '../components/ErrorBoundary';
-import Header from '../components/Header';
-import Scroll from '../components/Scroll';
-import SearchBox from '../components/SearchBox';
+
+import MainPage from '../components/MainPage';
+
 import './App.css';
 
 
@@ -27,34 +25,8 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 class App extends Component {
-    
-    componentDidMount() {
-       this.props.onRequestRobots();
-    }
-
-    render() {
-        // const { robots } = this.state;
-            const { searchField, onSearchChange, robots, isPending } = this.props;
-            const filteredRobots = robots.filter(robot =>{
-            return robot.name.toLowerCase().includes(searchField.toLowerCase());
-        })
-        // if(robots.length === 0){
-            // can also make this ternary, see build react app 6 for code
-        if(isPending){
-            return <h1>Loading</h1>
-        } else {
-            return (
-                <div className="tc">
-                    <Header />
-                    <SearchBox searchChange={onSearchChange} />
-                    <Scroll>
-                        <ErrorBoundary>
-                            <CardList robots={filteredRobots} />
-                        </ErrorBoundary>
-                    </Scroll>
-                </div>
-            );
-        }
+     render() {
+         return <MainPage { ...this.props }/>
     }
 }
 
